@@ -64,7 +64,4 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 let g:ale_lint_on_text_changed = 'never'
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
+noremap <leader>t :GFiles<cr>
