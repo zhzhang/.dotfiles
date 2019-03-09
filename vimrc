@@ -1,5 +1,5 @@
-execute pathogen#infect()
 syntax enable
+colorscheme elflord
 set autochdir
 set backspace=indent,eol,start
 set hidden
@@ -12,7 +12,6 @@ set novisualbell        " turn off visual bell
 set nocompatible
 set noswapfile
 nmap <F8> :TagbarToggle<CR>
-
 
 "highlight all matches
 set hlsearch
@@ -27,30 +26,14 @@ autocmd BufNewFile,BufReadPost *.hn set filetype=cpp
 nnoremap ; :
 nnoremap : ;
 
-
 filetype on
-filetype plugin on
-filetype indent on
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
-set autoindent
-set smartindent
 
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
-
-"inoremap <Left>  <NOP>
-"inoremap <Right> <NOP>
-"inoremap <Up>    <NOP>
-"inoremap <Down>  <NOP>
-"noremap <Left>  <NOP>
-"noremap <Right> <NOP>
-"noremap <Up>    <NOP>
-"noremap <Down>  <NOP>
-"noremap <Left>  <NOP>
+autocmd FileType python setlocal ts=4 sts=4 sw=4
 
 noremap <leader>. :CtrlPTag<cr>
 
@@ -58,10 +41,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
-Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 call plug#end()
 
-let g:ale_lint_on_text_changed = 'never'
+let g:javascript_plugin_flow = 1
+
+let b:ale_linters = ['eslint']
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
 noremap <leader>t :GFiles<cr>

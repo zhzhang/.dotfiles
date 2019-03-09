@@ -124,3 +124,10 @@ export NVM_DIR="$HOME/.nvm"
 set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# disable terminal scroll lock
+stty -ixon
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
