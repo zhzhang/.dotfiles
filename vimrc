@@ -43,6 +43,7 @@ Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 let g:javascript_plugin_flow = 1
@@ -55,5 +56,5 @@ let g:ale_fix_on_save = 1
 
 " FZF settings
 let g:ag_working_path_mode="r"
-noremap <leader>t :GFiles<cr>
+noremap <leader>t :GFiles --exclude-standard --others --cached<cr>
 noremap <leader>g :Ag<cr>
