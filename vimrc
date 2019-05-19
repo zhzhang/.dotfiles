@@ -16,7 +16,7 @@ nmap <F8> :TagbarToggle<CR>
 set hlsearch
 " Make 81st column standout
 highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100) 
+call matchadd('ColorColumn', '\%88v', 100) 
 "make trailing spaces and tabs stand out 
 set listchars=tab:>~,nbsp:_,trail:.
 set list
@@ -24,6 +24,14 @@ autocmd BufNewFile,BufReadPost *.hn set filetype=cpp
 "map semicolon to colon
 nnoremap ; :
 nnoremap : ;
+" Reduce split navigation by a keystroke
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" More sensible split opening
+set splitbelow
+set splitright
 
 filetype on
 
@@ -44,13 +52,18 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'vim-ruby/vim-ruby'
+Plug 'jalvesaq/NVim-R'
 call plug#end()
 
 let g:javascript_plugin_flow = 1
 
-let b:ale_linters = ['eslint']
+let b:ale_linters = {
+\  'javascript': ['eslint'],
+\  'python': ['flake8', 'pylint']
+\}
 let g:ale_fixers = {
-\  'javascript': ['prettier', 'eslint']
+\  'javascript': ['prettier', 'eslint'],
+\  'python': ['black']
 \}
 let g:ale_fix_on_save = 1
 

@@ -1,6 +1,10 @@
 [user]
-	email = zjzhang325@gmail.com
-	name = Jordan
+  email = zjzhang325@gmail.com
+  name = Jordan
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	s = status
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  s = status
+  a = add
+  c = commit -m
+  co = checkout
+  cb = checkout -b

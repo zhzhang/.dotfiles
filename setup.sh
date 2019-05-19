@@ -1,12 +1,16 @@
 # APT
 apt update
 apt install vim
-apt install pip
+apt install pip3
 apt install git
 apt install ruby-all-dev
 
 # Python packages
-pip install numpy
+pip3 install \
+  numpy \
+  pylint \
+  flake8 \
+  black
 
 # Custom
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
