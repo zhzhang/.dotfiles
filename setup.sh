@@ -1,5 +1,6 @@
 # APT
 apt update
+apt install tmux
 apt install neovim
 apt install pip3
 apt install git
