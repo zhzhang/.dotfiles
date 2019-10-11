@@ -1,9 +1,10 @@
 # APT
 apt update
-apt install vim
+apt install neovim
 apt install pip3
 apt install git
 apt install ruby-all-dev
+apt install silversearcher-ag
 
 # Python packages
 pip3 install \
