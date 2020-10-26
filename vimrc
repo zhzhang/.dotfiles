@@ -50,7 +50,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'vim-ruby/vim-ruby'
 Plug 'jalvesaq/NVim-R'
 call plug#end()
