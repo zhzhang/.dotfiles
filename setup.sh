@@ -10,13 +10,6 @@ apt install -y make \
   ruby-all-dev \
   silversearcher-ag
 
-# Python packages
-pip3 install \
-  numpy \
-  pylint \
-  flake8 \
-  black
-
 # Set up neovim config
 mkdir ~/.config/nvim && cp init.vim ~/.config/nvim
 
