@@ -8,3 +8,5 @@
   c = commit -m
   co = checkout
   cb = checkout -b
+[core]
+	editor = nvim
