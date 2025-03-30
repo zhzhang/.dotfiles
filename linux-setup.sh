@@ -14,12 +14,7 @@ apt install build-essential libssl-dev zlib1g-dev \
   libbz2-dev libreadline-dev libsqlite3-dev \
   libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-# Set up neovim config
-mkdir ~/.config/nvim && cp init.vim ~/.config/nvim
-
-# Install vim plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+./vim-setup.sh
 
 # Swap caps and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
