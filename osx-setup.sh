@@ -2,3 +2,6 @@
 
 brew install neovim
 brew install --cask docker
+brew install the_silver_searcher
+brew install fzf
+
